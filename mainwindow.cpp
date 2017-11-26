@@ -49,7 +49,11 @@ void MainWindow::on_New_clicked()
 
     delay();
     ui->statusBox->document()->setPlainText(QString::fromStdString(tmp));
+}
 
-
+void MainWindow::on_statusBox_destroyed()
+{
 
 }
+
+
