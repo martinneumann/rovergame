@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include <string>
+#include <QtWidgets>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sstream>
@@ -11,7 +12,19 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //QTextBrowser statusBox = new QTextBrowser();
+
+    scene = new QGraphicsScene(this);
+    ui->graphicsView->setScene(scene);
+
+    QBrush redBrush (Qt::red);
+    QBrush blueBrush (Qt::blue);
+    QPen blackPen (Qt::black);
+    blackPen.setWidth(6);
+
+    ellipse = scene->addEllipse(5,5,100,100,blackPen, redBrush);
+    rect = scene->addRect(10,10, 30, 60, blackPen, blueBrush);
+    rect->setFlag(QGraphicsItem::ItemIsMovable);
+
 
 }
 

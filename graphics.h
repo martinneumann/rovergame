@@ -2,6 +2,8 @@
 #define GRAPHICS_H
 
 #include <QWidget>
+#include <QGraphicsItem>
+#include <QGraphicsScene>
 
 class graphics
 {
