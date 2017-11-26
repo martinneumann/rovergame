@@ -15,6 +15,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void on_statusBox_destroyed();
+
+    void on_New_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
