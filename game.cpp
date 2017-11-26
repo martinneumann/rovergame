@@ -21,7 +21,7 @@ void gen_name(int seed, std::string *name) {
     char middle_consonant[] = "bcdfghjklmnpqrstvw   ";
 
 
-    srand(seed);
+    srand(time(NULL)); // use current time as random seed
     int len_of_name = rand() % 10 + 5;
     int i = 0;
     int vocal = 1;
