@@ -21,6 +21,11 @@ private slots:
 
     void on_New_clicked();
 
+    void on_Forward_clicked();
+    void on_Backward_clicked();
+    void on_Left_clicked();
+    void on_Right_clicked();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;

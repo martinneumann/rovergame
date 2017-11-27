@@ -22,11 +22,15 @@ MainWindow::MainWindow(QWidget *parent) :
     blackPen.setWidth(6);
 
     ellipse = scene->addEllipse(5,5,100,100,blackPen, redBrush);
+    ellipse->setFlag(QGraphicsItem::ItemIsMovable);
     rect = scene->addRect(10,10, 30, 60, blackPen, blueBrush);
     rect->setFlag(QGraphicsItem::ItemIsMovable);
 
 
+
 }
+
+
 
 MainWindow::~MainWindow()
 {
@@ -36,7 +40,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_New_clicked()
 {
+    // get new planet
 
+    // create planet object and get name, message
     planet gamePlanet;
     std::string tmp;
     gen_name((rand() % 1000), &tmp);
@@ -62,11 +68,38 @@ void MainWindow::on_New_clicked()
 
     delay();
     ui->statusBox->document()->setPlainText(QString::fromStdString(tmp));
+
+    // get graphics
+
+    tmp += "\nScanning geography, please stand by.";
+    delay();
+    ui->statusBox->document()->setPlainText(QString::fromStdString(tmp));
+
+    tmp += "\nGeography scanned.";
+    delay();
+    ui->statusBox->document()->setPlainText(QString::fromStdString(tmp));
+
 }
 
 void MainWindow::on_statusBox_destroyed()
 {
 
+}
+
+void MainWindow::on_Forward_clicked() {
+    rect->moveBy(0,-1);
+}
+
+void MainWindow::on_Backward_clicked() {
+    rect->moveBy(0,1);
+}
+
+void MainWindow::on_Left_clicked() {
+    rect->moveBy(-1,0);
+}
+
+void MainWindow::on_Right_clicked() {
+    rect->moveBy(1,0);
 }
 
 

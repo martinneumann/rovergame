@@ -62,7 +62,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="Right">
     <property name="geometry">
      <rect>
       <x>1010</x>
@@ -75,7 +75,7 @@
      <string>Right</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="Left">
     <property name="geometry">
      <rect>
       <x>910</x>
@@ -88,7 +88,7 @@
      <string>Left</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="Backward">
     <property name="geometry">
      <rect>
       <x>940</x>
@@ -101,7 +101,7 @@
      <string>Backwards</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="Forward">
     <property name="geometry">
      <rect>
       <x>940</x>
