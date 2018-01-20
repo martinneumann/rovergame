@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 
+
 class rover {
     int x;
     int y;
@@ -14,8 +15,9 @@ public:
 
 class planet {
 public:
-    int size_x;
-    int size_y;
+    static const int size_x = 100;
+    static const int size_y = size_x;
+    float map[size_x][size_y];
     std::string name;
 
 };
@@ -56,7 +58,7 @@ void create_map(planet *gamePlanet, int seed, int x, int y, std::string name);
 
 void gen_name(int seed, std::string *name_string);
 
-void delay();
+void delay(int time);
 
 std::string intToString(int i);
 

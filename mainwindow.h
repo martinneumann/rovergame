@@ -16,11 +16,12 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private:
+    float Interpolate();
+
 private slots:
     void on_statusBox_destroyed();
-
     void on_New_clicked();
-
     void on_Forward_clicked();
     void on_Backward_clicked();
     void on_Left_clicked();
